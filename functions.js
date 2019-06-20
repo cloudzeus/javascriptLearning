@@ -62,6 +62,8 @@ function SearchCakes(cakeName) {
 }
 //here we call the function
 var myResults = SearchCakes('vanilla dream');
+var myResults = SearchCakes('Strawbery full');
+var myResults = SearchCakes('no name');
 
    
     
