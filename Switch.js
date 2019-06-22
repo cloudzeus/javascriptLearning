@@ -47,12 +47,12 @@ function timeAdder(value1,label1,label2,value2){
         secondValueSeconds = secondsConvert(secondLabel, secondValue);
         totalSeconds = fistValueSeconds + secondValueSeconds;
         finalResult = transformFromSeconds(totalSeconds);
-        console.log(finalResult); 
+      
 
     }
 
 
-
+ return finalResult;
 }
 //We use this function to convert all values to seconds in order to add them laters
 function secondsConvert(type,valueForConvertion){
