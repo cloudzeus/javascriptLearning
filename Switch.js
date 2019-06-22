@@ -157,4 +157,4 @@ console.log(valuesCheck(1,'Seconds'));
 console.log('----------------------------- This function transforms the seconds to any convinitent value -----------------');
 console.log(transformFromSeconds(1860));
 console.log('------------------------------------ This the final function  -----------------------------------------------');
-console.log(timeAdder(23,'hours','Seconds',3600));
+console.log(timeAdder(95,'hours','Seconds',3600));
