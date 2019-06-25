@@ -10,7 +10,7 @@ Instead of only printing "fizz", "buzz", and "fizzbuzz", add a fourth print stat
 You should print this whenever you encounter a number that is prime (divisible only by itself and one). As you implement this, don't worry about the efficiency of the algorithm you use to check for primes. It's okay for it to be slow.
 
 */
-let counter;
+
 for(i=1; i<=100; i++){
 // first of all we start with the most complex condition and we check the mod for 3 and 5 if the conditions is true we print
 //the fizzbuzz and we continue in order to avoid the print of buzz and fizz     
