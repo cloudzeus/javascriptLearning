@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Cutive+Mono&display=swap" rel="stylesheet">
+    <title>This is the title for DOM manipulation</title>
+</head>
+<style>
+body{
+    font-family: 'Cutive Mono', monospace;
+    color: #666;
+}
+.inlineDivs{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: rgb(199, 197, 197);
+    padding-bottom: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+
+}
+.innerDiv{
+    display: inline-block; 
+    margin-top: 0.6rem;
+    width: 65px;
+    height: 75px;
+    padding: 0.1rem;
+    
+    background-color: black;
+}
+.divColorText{
+    color: black;
+    font-size: 0.9rem;
+    letter-spacing: 0.32rem;
+    text-align: center;
+    position: relative;
+    vertical-align:text-bottom;
+    margin-bottom: 1rem;
+    margin-top: 0.1rem;    
+}
+#rectangleWrapper{
+    margin: auto;
+    width: 90%;
+    justify-content:space-between;
+    display: block;   
+    
+}
+#root{
+    text-align: center;
+}
+
+</style>
+<body>
+    <div id="root">
+    <h1>This is the title for DOM manipulation</h1>
+    <h2>From here we will test how we can work with dom with Javascript</h2>
+    <div id="rectangleWrapper" > 
+    </div>
+    </div>
+</body>
+</html>
+<script>
+
+// first we create a function to generate random colors in order to avoid search for each element    
+function genarateRandomColor(){
+  let randomColor =  '#'+Math.random().toString(16).slice(-6);
+  return randomColor;
+}
+
+const containerDiv = document.getElementById('rectangleWrapper');
+const divMainElement = document.createElement('div');
+divMainElement.classList.add('inlineDivs');
+const coloredDiv = document.createElement('div');
+coloredDiv.classList.add('innerDiv');
+let divColor = genarateRandomColor();
+coloredDiv.style.backgroundColor = divColor;
+const colorTextLabel = document.createElement('div');
+colorTextLabel.classList.add('divColorText');
+colorTextLabel.innerHTML=divColor;
+
+for (let i=0; i<10; i++){
+ const newElement = document.createElement('DIV');
+ newElement.id=(i+1);
+ console.log(('Here are the rectangle IDs:  ')+(i+1));
+ newElement.classList.add('inlineDivs');
+ containerDiv.appendChild(newElement);
+ const newInner = document.createElement('DIV');
+ newInner.id='Inner'+(i+1);
+ newInner.classList.add('innerDiv');
+ let randomColor = genarateRandomColor()
+ newInner.style.backgroundColor = randomColor;
+ document.getElementById((i+1)).appendChild(newInner);
+ const innerText = document.createElement('DIV');
+ innerText.classList.add('divColorText');
+ innerText.innerHTML = randomColor;
+ document.getElementById((i+1)).appendChild(innerText);
+}
+
+
+
+
+
+
+
+
+</script>
