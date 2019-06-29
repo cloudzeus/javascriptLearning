@@ -139,6 +139,27 @@ const checkResults = function(){
 
         
             alert('You WON!!!!');
+            //We add all event handlers
+            a1.addEventListener("dblclick", checkO);
+            a2.addEventListener("dblclick", checkO);
+            a3.addEventListener("dblclick", checkO);
+            b1.addEventListener("dblclick", checkO);
+            b2.addEventListener("dblclick", checkO);
+            b3.addEventListener("dblclick", checkO);
+            c1.addEventListener("dblclick", checkO);
+            c2.addEventListener("dblclick", checkO);
+            c3.addEventListener("dblclick", checkO);
+
+            a1.addEventListener("click", check);
+            a2.addEventListener("click", check);
+            a3.addEventListener("click", check);
+            b1.addEventListener("click", check);
+            b2.addEventListener("click", check);
+            b3.addEventListener("click", check);
+            c1.addEventListener("click", check);
+            c2.addEventListener("click", check);
+            c3.addEventListener("click", check);
+           
             aValues = ['null','null','null'];
             bValues = ['null','null','null'];
             cValues = ['null','null','null'];
@@ -169,10 +190,31 @@ const checkResults = function(){
             c2.classList.remove('forbitclick');
             c3.classList.remove('makeRed');
             c3.classList.remove('forbitclick');
+  
         
        
     }else if (!aValues.includes('null') && !bValues.includes('null') && !cValues.includes('null') ){
         alert('Nobody Won');
+        //We add all event handlers
+        a1.addEventListener("dblclick", checkO);
+        a2.addEventListener("dblclick", checkO);
+        a3.addEventListener("dblclick", checkO);
+        b1.addEventListener("dblclick", checkO);
+        b2.addEventListener("dblclick", checkO);
+        b3.addEventListener("dblclick", checkO);
+        c1.addEventListener("dblclick", checkO);
+        c2.addEventListener("dblclick", checkO);
+        c3.addEventListener("dblclick", checkO);
+
+        a1.addEventListener("click", check);
+        a2.addEventListener("click", check);
+        a3.addEventListener("click", check);
+        b1.addEventListener("click", check);
+        b2.addEventListener("click", check);
+        b3.addEventListener("click", check);
+        c1.addEventListener("click", check);
+        c2.addEventListener("click", check);
+        c3.addEventListener("click", check);
         aValues = ['null','null','null'];
         bValues = ['null','null','null'];
         cValues = ['null','null','null'];
